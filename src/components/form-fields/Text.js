@@ -1,4 +1,5 @@
 import React from 'react';
+import { TextInput } from 'react-native';
 import asField from '../../HOC/asField';
 
 const Text = ({ fieldApi, fieldState, ...props }) => {
@@ -13,15 +14,15 @@ const Text = ({ fieldApi, fieldState, ...props }) => {
     ...rest
   } = props;
   return (
-    <input
+    <TextInput
       {...rest}
       name={field}
       ref={forwardedRef}
       value={!value && value !== 0 ? '' : value}
-      onChange={e => {
-        setValue(e.target.value);
-        if (onChange) {
-          onChange(e);
+      onChangeText={newValue => {
+        setValue(newValue);
+        if (onChangeText) {
+          onChange(newValue);
         }
       }}
       onBlur={e => {
