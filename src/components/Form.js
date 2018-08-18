@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { View } from 'react-native';
 import { FormContext } from '../Context';
 import FormController from '../Controller/FormController';
 
@@ -64,29 +65,9 @@ class Form extends Component {
   }
 
   render() {
-    // TODO find better way to get ...rest
-    const {
-      children,
-      component,
-      render,
-      onSubmit,
-      preSubmit,
-      getApi,
-      dontPreventDefault,
-      onSubmitFailure,
-      initialValues,
-      onValueChange,
-      onChange,
-      ...rest
-    } = this.props;
     return (
       <FormContext.Provider value={this.formContext}>
-        <form
-          {...rest}
-          onReset={this.formContext.formApi.reset}
-          onSubmit={this.formContext.formApi.submitForm}>
-          {this.content}
-        </form>
+        <View>{this.content}</View>
       </FormContext.Provider>
     );
   }
