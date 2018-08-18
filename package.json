@@ -97,7 +97,8 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "@babel/runtime-corejs2": "^7.0.0-rc.1"
+    "@babel/runtime-corejs2": "^7.0.0-rc.1",
+    "react-native": "^0.56.0"
   },
   "nyc": {
     "instrument": false,
