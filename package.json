@@ -94,11 +94,11 @@
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^1.7.2",
+    "react-native": "^0.56.0"
   },
   "dependencies": {
-    "@babel/runtime-corejs2": "^7.0.0-rc.1",
-    "react-native": "^0.56.0"
+    "@babel/runtime-corejs2": "^7.0.0-rc.1"
   },
   "nyc": {
     "instrument": false,
